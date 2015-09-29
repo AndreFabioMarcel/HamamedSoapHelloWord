@@ -1,0 +1,36 @@
+body {
+    background-color: #f8f8f8;
+}
+
+.login-panel {
+    margin-top: 40%;
+    margin-bottom: 65%;
+}
+
+.navbar-default {
+    background-color: #F1F1F1;
+    border-color: #908D8E;
+}
+
+#footer {
+	height: 60px;
+}
+#footer {
+	background-color: #F1F1F1;
+}
+#footer div p{
+	background-color: #000000;
+	position: absolute;
+	top: auto;
+}
+
+@media (max-width: 767px) {
+ #footer {
+ 	margin-left: 20px;
+ 	margin-right: 20px;
+ 	margin-top: 150px;
+    padding-left: 220px;
+    padding-right: 20px;
+ }
+}
+
