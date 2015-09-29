@@ -4,7 +4,8 @@ body {
 
 .login-panel {
     margin-top: 40%;
-    margin-bottom: 65%;
+    margin-bottom: 44%;
+
 }
 
 .navbar-default {
@@ -18,10 +19,14 @@ body {
 #footer {
 	background-color: #F1F1F1;
 }
-#footer div p{
-	background-color: #000000;
-	position: absolute;
-	top: auto;
+
+#footer div p {
+    background-color: #F1F1F1;
+    position: absolute;
+    
+    margin-top: 18px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 @media (max-width: 767px) {
