@@ -5,37 +5,14 @@ body {
 .login-panel {
     margin-top: 40%;
     margin-bottom: 44%;
-
 }
 
-.navbar-default {
+#cabecalho .navbar-default {
     background-color: #F1F1F1;
     border-color: #908D8E;
 }
 
-#footer {
-	height: 60px;
+#rodape .navbar-default .navbar-text {
+    color: #777;
+    margin-left: 400px;
 }
-#footer {
-	background-color: #F1F1F1;
-}
-
-#footer div p {
-    background-color: #F1F1F1;
-    position: absolute;
-    
-    margin-top: 18px;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-
-@media (max-width: 767px) {
- #footer {
- 	margin-left: 20px;
- 	margin-right: 20px;
- 	margin-top: 150px;
-    padding-left: 220px;
-    padding-right: 20px;
- }
-}
-
