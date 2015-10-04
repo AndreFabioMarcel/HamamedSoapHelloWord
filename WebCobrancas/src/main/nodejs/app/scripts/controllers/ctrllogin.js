@@ -13,10 +13,12 @@ angular.module('webCobrancasApp.ctrlLogin', [])
 /**
  * Controller Login
  */
-ControllerLogin.$inject = ['$injector'];
+ControllerLogin.$inject = ['$injector','Restangular'];
 
-function ControllerLogin($injector) {
+function ControllerLogin($injector, Restangular) {
     var viewModel = this;
+
+    viewModel.ListCtrl = Restangular.one("estado",24).get();
 
     viewModel.awesomeThings = [
       'HTML5 Boilerplate',
