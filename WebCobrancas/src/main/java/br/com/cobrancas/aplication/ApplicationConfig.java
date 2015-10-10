@@ -1,4 +1,4 @@
-package br.com.cobrancas.util;
+package br.com.cobrancas.aplication;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
