@@ -44,16 +44,12 @@
           $routeProvider.otherwise({
               redirectTo: '/'
           });
-
-          RestangularProvider.setDefaultHeaders({
-              'Content-Type': 'application/json',
-              'X-Requested-With': 'XMLHttpRequest',
-              'Access-Control-Allow-Origin' : 'http://localhost:8080',
-              'Access-Control-Allow-Credentials':'true',
-              'Access-Control-Allow-Methods':'GET'
-          });
-
+                   
           RestangularProvider.setBaseUrl('http://localhost:8080/app/api');
+
+          RestangularProvider.setDefaultHeaders({ "X-Requested-With": "XMLHttpRequest"});
+
+          RestangularProvider.setDefaultHttpFields({withCredentials: false});
 
           //RestangularProvider.setRequestSuffix('!');
       }
