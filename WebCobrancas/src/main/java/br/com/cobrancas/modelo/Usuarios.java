@@ -3,10 +3,14 @@ package br.com.cobrancas.modelo;
 import br.com.cobrancas.util.AbstractBuilder;
 import br.com.cobrancas.util.AbstractEntityId;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,12 +39,10 @@ public class Usuarios implements AbstractEntityId {
     @Column(name = "TIPO_USUARIO")
     private TipoUsuario tipoUsuario;
     
-    @NotNull
-    @Column(name = "USUARIO")
+    @Column(name = "USUARIO", unique = true, length = 16, nullable = false)
     private String usuario;
     
-    @NotNull
-    @Column(name = "SENHA")
+    @Column(name = "SENHA", length = 80, nullable = false)
     private String senha;
     
     @NotNull
@@ -50,6 +52,9 @@ public class Usuarios implements AbstractEntityId {
     @ManyToOne
     @JoinColumn(name = "ID_ENTIDADE", nullable = false)
     private Entidades entidade;
+    
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> roles = new HashSet<String>();
 
     @Override
     public Long getId() {
@@ -116,6 +121,14 @@ public class Usuarios implements AbstractEntityId {
         this.entidade = entidade;
     }
     
+    public Set<String> getRoles(){
+        return roles;
+    }
+
+    private void addRole(String role){
+	this.roles.add(role);
+    }
+    
     public static class Builder extends AbstractBuilder<Usuarios, Builder> {
 
         private Builder(Usuarios usuario) {
@@ -167,6 +180,11 @@ public class Usuarios implements AbstractEntityId {
         
         public Builder entidade(Entidades entidade) {
             entity.setEntidade(entidade);
+            return this;
+        }
+        
+        public Builder roles(String role){
+            entity.addRole(role);
             return this;
         }
     }
