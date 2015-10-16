@@ -9,11 +9,13 @@
  */
 
 angular.module('webCobrancasApp.ctrlMain', [])
-    .controller('ControllerMain', ControllerMain);
+    .controller('ControllerMain', ControllerMain)
+    .run(appRun);
 
 /**
  * Controller Main
  */
+
 ControllerMain.$inject = ['$injector'];
 
 function ControllerMain($injector) {
@@ -23,5 +25,23 @@ function ControllerMain($injector) {
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
+    ];
+}
+
+/* @ngInject */
+function appRun(routerHelper) {
+    routerHelper.configureStates(getStates());
+}
+
+function getStates() {
+    return [
+        {
+            state: 'usuarios',
+            config: {
+                abstract: true,
+                template: 'Fabio Teste',
+                url: '/customer'
+            }
+        }
     ];
 }

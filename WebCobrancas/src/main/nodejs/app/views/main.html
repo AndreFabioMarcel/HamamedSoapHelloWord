@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand fa fa-shield fa-lg fa-2x" href="#">WebCobranças</a>
+                <a class="navbar-brand fa fa-shield fa-lg fa-2x">WebCobranças</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -22,7 +22,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
-                            <a href="#">
+                            <a ui-sref="#">
                                 <div>
                                     <strong>John Smith</strong>
                                     <span class="pull-right text-muted">
@@ -34,7 +34,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">
+                            <a ui-sref="#">
                                 <div>
                                     <strong>John Smith</strong>
                                     <span class="pull-right text-muted">
@@ -46,7 +46,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">
+                            <a ui-sref="#">
                                 <div>
                                     <strong>John Smith</strong>
                                     <span class="pull-right text-muted">
@@ -58,7 +58,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a class="text-center" href="#">
+                            <a class="text-center" ui-sref="#">
                                 <strong>Ler Todas as Mensagens</strong>
                                 <i class="fa fa-angle-right"></i>
                             </a>
@@ -74,7 +74,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
-                            <a href="#">
+                            <a ui-sref="#">
                                 <div>
                                     <i class="fa fa-comment fa-fw"></i> New Comment
                                     <span class="pull-right text-muted small">4 minutes ago</span>
@@ -83,7 +83,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">
+                            <a ui-sref="#">
                                 <div>
                                     <i class="fa fa-twitter fa-fw"></i> 3 New Followers
                                     <span class="pull-right text-muted small">12 minutes ago</span>
@@ -92,7 +92,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">
+                            <a ui-sref="#">
                                 <div>
                                     <i class="fa fa-envelope fa-fw"></i> Message Sent
                                     <span class="pull-right text-muted small">4 minutes ago</span>
@@ -101,7 +101,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">
+                            <a ui-sref="#">
                                 <div>
                                     <i class="fa fa-tasks fa-fw"></i> New Task
                                     <span class="pull-right text-muted small">4 minutes ago</span>
@@ -110,7 +110,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#">
+                            <a ui-sref="#">
                                 <div>
                                     <i class="fa fa-upload fa-fw"></i> Server Rebooted
                                     <span class="pull-right text-muted small">4 minutes ago</span>
@@ -119,7 +119,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a class="text-center" href="#">
+                            <a class="text-center" ui-sref="#">
                                 <strong>Ver Todos os Alertas</strong>
                                 <i class="fa fa-angle-right"></i>
                             </a>
@@ -133,12 +133,12 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
+                        <li><a ui-sref="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configurações</a>
+                        <li><a ui-sref="#"><i class="fa fa-gear fa-fw"></i> Configurações</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="#/login"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
+                        <li><a ui-sref="login"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -155,25 +155,28 @@
                             <!-- /input-group -->
                         </li>                        
                         <li>
-                            <a href="#"><i></i> Entidade</a>
+                            <a ui-sref="#"><i></i> Entidade</a>
                         </li> 
                         <li>
-                            <a href="#"><i></i> Credores</a>
+                            <a ui-sref="#"><i></i> Credores</a>
                         </li> 
                         <li>
-                            <a href="#"><i></i> Devedores</a>
+                            <a ui-sref="#"><i></i> Devedores</a>
                         </li> 
                         <li>
-                            <a href="#"><i></i> Relatórios</a>
+                            <a ui-sref="#"><i></i> Relatórios</a>
                         </li> 
                         <li>
-                            <a href="#"><i></i> Agenda</a>
+                            <a ui-sref="#"><i></i> Agenda</a>
                         </li> 
                         <li>
-                            <a href="#"><i></i> Negociações</a>
+                            <a ui-sref="#"><i></i> Negociações</a>
                         </li> 
                         <li>
-                            <a href="#"><i></i> Acordos</a>
+                            <a ui-sref="#"><i></i> Acordos</a>
+                        </li>
+                        <li>
+                            <a ui-sref="usuarios"><i></i> Usuários</a>
                         </li>                        
                     </ul>
                 </div>
@@ -183,7 +186,7 @@
         </nav>
 
         <div id="page-wrapper">
-            
+            <div ui-view> </div>
         </div>
 
         <div id="rodape">

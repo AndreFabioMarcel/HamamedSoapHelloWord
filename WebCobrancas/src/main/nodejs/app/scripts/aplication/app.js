@@ -15,35 +15,36 @@
         'webCobrancasApp.ctrlMain',
         'webCobrancasApp.filters',
         'webCobrancasApp.ctrlLogin',
+        'webCobrancasApp.router',
         'ngAnimate',
         'ngCookies',
-        'ngResource',
-        'ngRoute',
+        'ngResource',        
         'ngSanitize',
         'ngTouch',
-        'restangular'
+        'restangular',
+        'ui.router'
       ])
 
-      .config(['$routeProvider','RestangularProvider', function($routeProvider, RestangularProvider) {
+      .config(['$stateProvider','$urlRouterProvider','RestangularProvider', 
+        function($stateProvider, $urlRouterProvider, RestangularProvider) {
+
+          $urlRouterProvider.otherwise("login");
         
-          $routeProvider.when('/', {
-              templateUrl: 'views/login.html',
-              controller: 'ControllerMain'
-          });
+          $stateProvider
+            .state("main", {
+              url: "/main",
+              templateUrl: "views/main.html",
+              controller: "ControllerMain",
+              controllerAs: "cm"
+            })
 
-          $routeProvider.when('/main', {
-              templateUrl: 'views/main.html',
-              controller: 'ControllerMain'
-          });
+            .state("login", {
+              url: "/login",
+              templateUrl: "views/login.html",
+              controller: "ControllerLogin",
+              controllerAs: "cl"
+            });
 
-          $routeProvider.when('/login', {
-              templateUrl: 'views/login.html',
-              controller: 'ControllerMain'
-          });
-
-          $routeProvider.otherwise({
-              redirectTo: '/'
-          });
                    
           RestangularProvider.setBaseUrl('http://localhost:8080/app/api');
 
