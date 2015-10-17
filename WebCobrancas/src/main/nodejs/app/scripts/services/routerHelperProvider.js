@@ -1,6 +1,6 @@
-'use strict';
+/*'use strict';*/
 
-angular.module('webCobrancasApp.router')
+angular.module('webCobrancasApp.router',['ui.router'])
     .provider('routerHelper', routerHelperProvider);
 
 routerHelperProvider.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
@@ -9,7 +9,7 @@ function routerHelperProvider($locationProvider, $stateProvider, $urlRouterProvi
     /* jshint validthis:true */
     this.$get = RouterHelper;
 
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 
     RouterHelper.$inject = ['$state'];
     /* @ngInject */

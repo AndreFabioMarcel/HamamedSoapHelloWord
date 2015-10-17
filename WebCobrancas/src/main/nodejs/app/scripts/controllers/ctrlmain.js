@@ -36,11 +36,11 @@ function appRun(routerHelper) {
 function getStates() {
     return [
         {
-            state: 'usuarios',
+            state: 'usuario',
             config: {
-                abstract: true,
-                template: 'Fabio Teste',
-                url: '/customer'
+                 //abstract: true,
+                templateUrl: 'views/about.html',
+                url: '/usuario'
             }
         }
     ];
