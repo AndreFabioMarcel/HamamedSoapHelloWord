@@ -42,49 +42,49 @@ function getStates() {
             state: 'main.entidade',
             config: {                                
                 url: '/entidade',
-                templateUrl: 'views/about.html'
+                templateUrl: 'views/entidade.html'
             }
         },
         {
             state: 'main.credores',
             config: {                                
                 url: '/credores',
-                templateUrl: 'views/about.html'
+                templateUrl: 'views/credores.html'
             }
         },
         {
             state: 'main.devedores',
             config: {                                
                 url: '/devedores',
-                templateUrl: 'views/about.html'
+                templateUrl: 'views/devedores.html'
             }
         },
         {
             state: 'main.relatorios',
             config: {                                
                 url: '/relatorios',
-                templateUrl: 'views/about.html'
+                templateUrl: 'views/relatorios.html'
             }
         },
         {
             state: 'main.agenda',
             config: {                                
                 url: '/agenda',
-                templateUrl: 'views/about.html'
+                templateUrl: 'views/agenda.html'
             }
         },
         {
             state: 'main.negociacoes',
             config: {                                
                 url: '/negociacoes',
-                templateUrl: 'views/about.html'
+                templateUrl: 'views/negociacoes.html'
             }
         },
         {
             state: 'main.acordos',
             config: {                                
                 url: '/acordos',
-                templateUrl: 'views/about.html'
+                templateUrl: 'views/acordos.html'
             }
         }
     ];
