@@ -21,11 +21,7 @@ ControllerMain.$inject = ['$injector'];
 function ControllerMain($injector) {
     var viewModel = this;
 
-    viewModel.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    viewModel.awesomeThings = ['HTML5 Boilerplate','AngularJS','Karma'];
 }
 
 /* @ngInject */
@@ -36,11 +32,59 @@ function appRun(routerHelper) {
 function getStates() {
     return [
         {
-            state: 'usuario',
+            state: 'main.usuario',
             config: {
-                 //abstract: true,
-                templateUrl: 'views/about.html',
-                url: '/usuario'
+                url: '/usuario',
+                templateUrl: 'views/usuario.html'
+            }
+        },
+        {
+            state: 'main.entidade',
+            config: {                                
+                url: '/entidade',
+                templateUrl: 'views/about.html'
+            }
+        },
+        {
+            state: 'main.credores',
+            config: {                                
+                url: '/credores',
+                templateUrl: 'views/about.html'
+            }
+        },
+        {
+            state: 'main.devedores',
+            config: {                                
+                url: '/devedores',
+                templateUrl: 'views/about.html'
+            }
+        },
+        {
+            state: 'main.relatorios',
+            config: {                                
+                url: '/relatorios',
+                templateUrl: 'views/about.html'
+            }
+        },
+        {
+            state: 'main.agenda',
+            config: {                                
+                url: '/agenda',
+                templateUrl: 'views/about.html'
+            }
+        },
+        {
+            state: 'main.negociacoes',
+            config: {                                
+                url: '/negociacoes',
+                templateUrl: 'views/about.html'
+            }
+        },
+        {
+            state: 'main.acordos',
+            config: {                                
+                url: '/acordos',
+                templateUrl: 'views/about.html'
             }
         }
     ];
