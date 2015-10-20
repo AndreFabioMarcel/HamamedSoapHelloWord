@@ -30,11 +30,11 @@ public class Usuarios implements AbstractEntityId {
     @Column(name = "NOME")
     private String nome;
     
-    @NotNull
+    //@NotNull
     @Column(name = "EMAIL")
     private String email;
     
-    @NotNull
+    //@NotNull
     @Enumerated(EnumType.STRING)
     @Column(name = "TIPO_USUARIO")
     private TipoUsuario tipoUsuario;
@@ -45,13 +45,9 @@ public class Usuarios implements AbstractEntityId {
     @Column(name = "SENHA", length = 80, nullable = false)
     private String senha;
     
-    @NotNull
+    //@NotNull
     @Column(name = "DATA_CADASTRO")
     private LocalDate dataCadastro;
-    
-    @ManyToOne
-    @JoinColumn(name = "ID_ENTIDADE", nullable = false)
-    private Entidades entidade;
     
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> roles = new HashSet<String>();
@@ -112,14 +108,6 @@ public class Usuarios implements AbstractEntityId {
     private void setDataCadastro(LocalDate dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
-
-    public Entidades getEntidade() {
-        return entidade;
-    }
-
-    private void setEntidade(Entidades entidade) {
-        this.entidade = entidade;
-    }
     
     public Set<String> getRoles(){
         return roles;
@@ -177,12 +165,7 @@ public class Usuarios implements AbstractEntityId {
             entity.setDataCadastro(dataCadast);
             return this;
         }
-        
-        public Builder entidade(Entidades entidade) {
-            entity.setEntidade(entidade);
-            return this;
-        }
-        
+               
         public Builder roles(String role){
             entity.addRole(role);
             return this;

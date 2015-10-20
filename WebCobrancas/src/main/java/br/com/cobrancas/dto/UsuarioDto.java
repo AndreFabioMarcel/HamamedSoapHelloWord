@@ -36,13 +36,10 @@ public class UsuarioDto {
     @NotNull
     private LocalDate dataCadastro;
 
-    @NotNull
-    private Entidades entidade;
-
     public UsuarioDto() {
     }
 
-    public UsuarioDto(Long id, String nome, String email, TipoUsuario tipoUsuario, String usuario, String senha, LocalDate dataCadastro, Entidades entidade) {
+    public UsuarioDto(Long id, String nome, String email, TipoUsuario tipoUsuario, String usuario, String senha, LocalDate dataCadastro) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -50,7 +47,6 @@ public class UsuarioDto {
         this.usuario = usuario;
         this.senha = senha;
         this.dataCadastro = dataCadastro;
-        this.entidade = entidade;
     }
 
     public Long getId() {
@@ -109,14 +105,6 @@ public class UsuarioDto {
         this.dataCadastro = dataCadastro;
     }
 
-    public Entidades getEntidade() {
-        return entidade;
-    }
-
-    public void setEntidade(Entidades entidade) {
-        this.entidade = entidade;
-    }
-
     public static class UsuarioDtoBuilder {
 
         private Long id;
@@ -125,8 +113,7 @@ public class UsuarioDto {
         private TipoUsuario tipoUsuario;
         private String usuario;
         private String senha;
-        private LocalDate dataCadastro;
-        private Entidades entidade;
+        private LocalDate dataCadastro;        
 
         private UsuarioDtoBuilder() {
         }
@@ -166,13 +153,8 @@ public class UsuarioDto {
             return this;
         }
 
-        public UsuarioDtoBuilder entidade(Entidades entidade) {
-            this.entidade = entidade;
-            return this;
-        }
-
         public UsuarioDto Build() {
-            return new UsuarioDto(this.id, this.nome, this.email, this.tipoUsuario, this.usuario, this.senha, this.dataCadastro, this.entidade);
+            return new UsuarioDto(this.id, this.nome, this.email, this.tipoUsuario, this.usuario, this.senha, this.dataCadastro);
         }
     }
 
@@ -191,8 +173,7 @@ public class UsuarioDto {
                     .tipoUsuario(dto.getTipoUsuario())
                     .usuario(dto.getUsuario())
                     .senha(dto.getSenha())
-                    .dataCadast(dto.getDataCadastro())
-                    .entidade(dto.getEntidade())
+                    .dataCadast(dto.getDataCadastro())                    
                     .build();
         }
 
@@ -205,8 +186,7 @@ public class UsuarioDto {
                     .tipoUsuario(t.getTipoUsuario())
                     .usuario(t.getUsuario())
                     .senha(t.getSenha())
-                    .dataCadastro(t.getDataCadastro())
-                    .entidade(t.getEntidade())
+                    .dataCadastro(t.getDataCadastro())                    
                     .Build();
         }
     }
