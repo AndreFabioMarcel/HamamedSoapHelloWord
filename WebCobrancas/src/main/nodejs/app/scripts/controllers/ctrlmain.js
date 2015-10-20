@@ -35,7 +35,9 @@ function getStates() {
             state: 'main.usuario',
             config: {
                 url: '/usuario',
-                templateUrl: 'views/usuario.html'
+                templateUrl: 'views/usuario.html',
+                controller: 'ControllerUsuario',
+                controllerAs: 'cu'
             }
         },
         {

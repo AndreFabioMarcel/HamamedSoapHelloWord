@@ -12,9 +12,12 @@
 
     angular
       .module('webCobrancasApp', [
-        'webCobrancasApp.ctrlMain',
-        'webCobrancasApp.filters',
+        'webCobrancasApp.ctrlMain',        
         'webCobrancasApp.ctrlLogin',
+        'webCobrancasApp.ctrlUsuario',
+        'webCobrancasApp.factoryRepository',
+        'webCobrancasApp.usuarioRepository',
+        'webCobrancasApp.filters',
         'webCobrancasApp.router',
         'ngAnimate',
         'ngCookies',

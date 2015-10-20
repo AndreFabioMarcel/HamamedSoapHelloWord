@@ -11,27 +11,20 @@
                 <form role="form">
               <!--  <div class="alert alert-danger">
                         <a class="close" data-dismiss="alert" href="#">×</a>Usuários ou senha incorretos!
-                    </div> -->
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-                            <div class="form-group">
-                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Nome" tabindex="1">
-                            </div>
-                        </div>                        
-                        <div class="col-xs-12 col-sm-8 col-md-8">
-                            <div class="form-group">
-                                <input type="text" name="last_name" id="last_name" class="form-control " placeholder="Sobrenome" tabindex="2">
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->                    
+                        
                     <div class="form-group">
-                        <input type="text" name="display_name" id="display_name" class="form-control " placeholder="Login" tabindex="3">
+                        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Nome" tabindex="1" ng-model="usuario.nome">
+                    </div>                        
+                    
+                    <div class="form-group">
+                        <input type="text" name="display_name" id="display_name" class="form-control " placeholder="Login" tabindex="3" ng-model="usuario.usuario">
                     </div>
 
                     <div class="row">
                         <div class=" col-sm-6 col-md-6">
                             <div class="form-group">
-                                <input type="password" name="password" id="password" class="form-control " placeholder="Senha" tabindex="4">
+                                <input type="password" name="password" id="password" class="form-control " placeholder="Senha" tabindex="4" ng-model="usuario.senha">
                             </div>
                         </div>
                         <div class=" col-sm-6 col-md-6">
@@ -42,13 +35,13 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control " placeholder="Email" tabindex="6">
+                        <input type="email" name="email" id="email" class="form-control " placeholder="Email do {{cu.fabio}}" tabindex="6" ng-model="usuario.email">
                     </div>
 
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-md-4">
                             <div class="form-group">
-                                <button type="button" class="btn btn-success">Salvar</button>
+                                <button type="button" class="btn btn-success" ng-click="cu.save()">Salvar</button>
                                 <button type="button" class="btn btn-danger">Excluir</button>
                             </div>
                         </div>

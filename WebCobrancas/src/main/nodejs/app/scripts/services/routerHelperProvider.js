@@ -1,7 +1,7 @@
 /*'use strict';*/
 
-angular.module('webCobrancasApp.router',['ui.router'])
-    .provider('routerHelper', routerHelperProvider);
+angular.module('webCobrancasApp.router', ['ui.router'])
+        .provider('routerHelper', routerHelperProvider);
 
 routerHelperProvider.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
 /* @ngInject */
@@ -26,7 +26,7 @@ function routerHelperProvider($locationProvider, $stateProvider, $urlRouterProvi
         ///////////////
 
         function configureStates(states, otherwisePath) {
-            states.forEach(function(state) {
+            states.forEach(function (state) {
                 $stateProvider.state(state.state, state.config);
             });
             if (otherwisePath && !hasOtherwise) {
@@ -35,6 +35,8 @@ function routerHelperProvider($locationProvider, $stateProvider, $urlRouterProvi
             }
         }
 
-        function getStates() { return $state.get(); }
+        function getStates() {
+            return $state.get();
+        }
     }
 }
