@@ -88,6 +88,15 @@ function getStates() {
                 url: '/acordos',
                 templateUrl: 'views/acordos.html'
             }
+        },
+        {
+            state: 'main.bairros',
+            config: {                                
+                url: '/bairros',
+                templateUrl: 'views/bairros.html',
+                controller: 'ControllerBairro',
+                controllerAs: 'cb'
+            }
         }
     ];
 }
