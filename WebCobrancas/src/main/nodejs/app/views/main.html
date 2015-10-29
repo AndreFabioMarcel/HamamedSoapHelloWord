@@ -1,19 +1,64 @@
 <div>
-<link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand fa fa-shield fa-lg fa-2x">WebCobranças</a>
-            </div>
-            <!-- /.navbar-header -->
+            <a class="navbar-brand fa fa-shield fa-lg fa-2x">WebCobranças</a>
+
+            <ul class="nav navbar-top-links navbar-left">
+                
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        Configurações 
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ui-sref="#">sem nada</a></li>
+                        <li><a ui-sref="#">sem nada</a></li>
+                        <li><a ui-sref="#">sem nada</a></li>                        
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button"> 
+                        Cadastros
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ui-sref="main.entidade">Entidades</a></li>
+                        <li><a ui-sref="main.usuario">Usuários</a></li>
+                        <li><a ui-sref="main.bairros">Bairros</a></li>                                            
+                        <li><a ui-sref="main.credores">Credores</a></li>                                            
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button"> 
+                        Relatórios
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ui-sref="#">sem nada</a></li>
+                        <li><a ui-sref="#">sem nada</a></li>
+                        <li><a ui-sref="#">sem nada</a></li>                                            
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button"> 
+                        Utilitários
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ui-sref="#">sem nada</a></li>
+                        <li><a ui-sref="#">sem nada</a></li>
+                        <li><a ui-sref="#">sem nada</a></li>                                            
+                    </ul>
+                </li>
+
+
+            </ul>
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -66,7 +111,7 @@
                     </ul>
                     <!-- /.dropdown-messages -->
                 </li>
-                
+
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown">
@@ -145,47 +190,7 @@
                 </li>
                 <!-- /.dropdown -->
             </ul>
-            <!-- /.navbar-top-links -->
-
-            <div class="navbar-default sidebar" role="navigation">
-                <div class="sidebar-nav navbar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                           
-                            <!-- /input-group -->
-                        </li>                        
-                        <li>
-                            <a ui-sref="main.entidade"><i></i> Entidade</a>
-                        </li> 
-                        <li>
-                            <a ui-sref="main.credores"><i></i> Credores</a>
-                        </li> 
-                        <li>
-                            <a ui-sref="main.devedores"><i></i> Devedores</a>
-                        </li> 
-                        <li>
-                            <a ui-sref="main.relatorios"><i></i> Relatórios</a>
-                        </li> 
-                        <li>
-                            <a ui-sref="main.agenda"><i></i> Agenda</a>
-                        </li> 
-                        <li>
-                            <a ui-sref="main.negociacoes"><i></i> Negociações</a>
-                        </li> 
-                        <li>
-                            <a ui-sref="main.acordos"><i></i> Acordos</a>
-                        </li>
-                        <li>
-                            <a ui-sref="main.usuario"><i></i> Usuários</a>
-                        </li>      
-                         <li>
-                            <a ui-sref="main.bairros"><i></i> Bairros</a>
-                        </li>                   
-                    </ul>
-                </div>
-                <!-- /.sidebar-collapse -->
-            </div>
-            <!-- /.navbar-static-side -->
+            <!-- /.navbar-top-links -->            
         </nav>
 
         <div id="page-wrapper">
@@ -195,10 +200,10 @@
         <div id="rodape">
             <div class="navbar navbar-default navbar-fixed-bottom">
                 <div class="container">
-                  <p class="navbar-text pull-left">© 2015 - Todos os direitos reservados.
-                       <a href="https://github.com/HamamedTurkey/HamamedSoapHelloWord" target="_blank" >WebCobranças</a>
-                  </p>      
+                    <p class="navbar-text pull-left">© 2015 - Todos os direitos reservados.
+                        <a href="https://github.com/HamamedTurkey/HamamedSoapHelloWord" target="_blank" >WebCobranças</a>
+                    </p>      
                 </div>    
             </div>
         </div>    
-</div>
+    </div>
