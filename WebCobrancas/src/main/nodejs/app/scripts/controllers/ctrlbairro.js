@@ -20,9 +20,13 @@ function ControllerBairro($scope, $location, BairroRepository) {
 
     viewModel.save = function () {
 	    BairroRepository.create($scope.bairro).then(function () {
-	      $location.path('/login');
+	      viewModel.ListaBairro = BairroRepository.getList();
 	    });
 	};
+
+	viewModel.ListaBairro = BairroRepository.getList();
+
+
 
 }    
 
