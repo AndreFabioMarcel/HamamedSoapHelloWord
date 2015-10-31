@@ -19,8 +19,8 @@ public class Agendas implements AbstractEntityId{
     private Long id;
     
     @ManyToOne
-    @JoinColumn(name = "ID_ENTIDADE", nullable = false)
-    private Entidades entidade;
+    @JoinColumn(name = "ID_USUARIO", nullable = false)
+    private Usuarios usuario;
     
     @Override
     public Long getId() {
@@ -31,12 +31,12 @@ public class Agendas implements AbstractEntityId{
         this.id = id;
     }
 
-    public Entidades getEntidade() {
-        return entidade;
+    public Usuarios getEntidade() {
+        return usuario;
     }
 
-    private void setEntidade(Entidades entidade) {
-        this.entidade = entidade;
+    private void setEntidade(Usuarios usuario) {
+        this.usuario = usuario;
     }
     
     public static class Builder extends AbstractBuilder<Agendas, Builder> {
@@ -58,8 +58,8 @@ public class Agendas implements AbstractEntityId{
             return this;
         }
 
-        public Builder entidade(Entidades entidade) {
-            entity.setEntidade(entidade);
+        public Builder usuario(Usuarios usuario) {
+            entity.setEntidade(usuario);
             return this;
         }
     }

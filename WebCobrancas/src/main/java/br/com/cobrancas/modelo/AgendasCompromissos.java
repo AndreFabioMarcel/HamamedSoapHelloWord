@@ -105,7 +105,7 @@ public class AgendasCompromissos implements AbstractEntityId{
             return this;
         }
 
-        public Builder nome(LocalDate dataCompromisso) {
+        public Builder dataCompromisso(LocalDate dataCompromisso) {
             entity.setDataCompromisso(dataCompromisso);
             return this;
         }
