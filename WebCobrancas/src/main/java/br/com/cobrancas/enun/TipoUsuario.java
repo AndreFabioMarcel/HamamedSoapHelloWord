@@ -1,16 +1,15 @@
-package br.com.cobrancas.modelo;
+package br.com.cobrancas.enun;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum TipoPessoa {
+public enum TipoUsuario {
 
-    FISICA("Pessoa Física"),
-    JURIDICA("Pessoa Jurídica"),
-    OUTROS("Pessoas Outros");
+    INTERNO("Interno"),
+    EXTERNO("Externo");
 
     private final String nome;
 
-    private TipoPessoa(String nome) {
+    private TipoUsuario(String nome) {
         this.nome = nome;
     }
 

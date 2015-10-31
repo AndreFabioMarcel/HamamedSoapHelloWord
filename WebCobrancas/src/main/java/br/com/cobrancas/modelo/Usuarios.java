@@ -1,5 +1,6 @@
 package br.com.cobrancas.modelo;
 
+import br.com.cobrancas.enun.TipoUsuario;
 import br.com.cobrancas.util.AbstractBuilder;
 import br.com.cobrancas.util.AbstractEntityId;
 import java.time.LocalDate;

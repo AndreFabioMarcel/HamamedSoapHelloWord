@@ -1,4 +1,4 @@
-package br.com.cobrancas.modelo;
+package br.com.cobrancas.enun;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 

@@ -1,7 +1,7 @@
 package br.com.cobrancas.dto;
 
 import br.com.cobrancas.modelo.Entidades;
-import br.com.cobrancas.modelo.TipoUsuario;
+import br.com.cobrancas.enun.TipoUsuario;
 import br.com.cobrancas.modelo.Usuarios;
 import br.com.cobrancas.util.AbstractRepresentationBuilder;
 import java.time.LocalDate;
