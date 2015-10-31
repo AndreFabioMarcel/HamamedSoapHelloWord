@@ -43,7 +43,7 @@ public class BairroResource {
     }
     
     @GET
-    public Response findAll(final BairroDto dto){
+    public Response findAll(){
         final List<BairroDto> bairros = bairroDtoBuilder.toRepresentation(bairroRepository.findAll());        
         return Response.ok(bairros).build();
     }

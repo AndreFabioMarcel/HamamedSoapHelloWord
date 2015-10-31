@@ -35,7 +35,7 @@ public class EstadoResource {
     }
     
     @GET
-    public Response findAll(final EstadoDto dto){
+    public Response findAll(){
         final List<EstadoDto> estados = estadoDtoBuilder.toRepresentation(estadoRepository.findAll());        
         return Response.ok(estados).build();
     }

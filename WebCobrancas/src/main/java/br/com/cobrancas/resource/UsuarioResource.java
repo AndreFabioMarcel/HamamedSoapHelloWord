@@ -41,7 +41,7 @@ public class UsuarioResource {
     }
     
     @GET
-    public Response findAll(final UsuarioDto dto){
+    public Response findAll(){
         final List<UsuarioDto> usuarios = usuarioDtoBuilder.toRepresentation(usuarioRepository.findAll());        
         return Response.ok(usuarios).build();
     }

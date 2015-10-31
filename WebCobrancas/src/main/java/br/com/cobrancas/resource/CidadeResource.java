@@ -35,7 +35,7 @@ public class CidadeResource {
     }
     
     @GET
-    public Response findAll(final CidadeDto dto){
+    public Response findAll(){
         final List<CidadeDto> cidades = cidadeDtoBuilder.toRepresentation(cidadeRepository.findAll());        
         return Response.ok(cidades).build();
     }
