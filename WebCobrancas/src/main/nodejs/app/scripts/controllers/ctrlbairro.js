@@ -25,8 +25,4 @@ function ControllerBairro($scope, $location, BairroRepository) {
 	};
 
 	viewModel.ListaBairro = BairroRepository.getList();
-
-
-
-}    
-
+} 
