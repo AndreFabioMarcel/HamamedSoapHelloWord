@@ -1,18 +1,9 @@
-body {
-    background-color: #f8f8f8;
-}
-
 .login-panel {
     margin-top: 40%;
     margin-bottom: 44%;
 }
 
-#cabecalho .navbar-default {
-    background-color: #F1F1F1;
-    border-color: #908D8E;
+.login-panel.panel.panel-default{
+	box-shadow: 3px 0px 30px 0px #99a3ad, 0px 0px 40px #eeeeee;
 }
 
-#rodape .navbar-default .navbar-text {
-    color: #777;
-    margin-left: 400px;
-}
