@@ -41,6 +41,7 @@ public class UsuarioResource {
     }
     
     @GET
+    @Produces("application/json")
     public Response findAll(){
         final List<UsuarioDto> usuarios = usuarioDtoBuilder.toRepresentation(usuarioRepository.findAll());        
         return Response.ok(usuarios).build();

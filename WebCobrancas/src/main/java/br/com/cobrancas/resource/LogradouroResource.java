@@ -43,6 +43,7 @@ public class LogradouroResource {
     }
     
     @GET
+    @Produces("application/json")
     public Response findAll(){
         final List<LogradouroDto> logradouros = logradouroDtoBuilder.toRepresentation(logradouroRepository.findAll());        
         return Response.ok(logradouros).build();

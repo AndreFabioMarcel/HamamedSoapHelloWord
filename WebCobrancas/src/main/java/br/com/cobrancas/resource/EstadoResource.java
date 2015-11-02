@@ -35,6 +35,7 @@ public class EstadoResource {
     }
     
     @GET
+    @Produces("application/json")
     public Response findAll(){
         final List<EstadoDto> estados = estadoDtoBuilder.toRepresentation(estadoRepository.findAll());        
         return Response.ok(estados).build();
