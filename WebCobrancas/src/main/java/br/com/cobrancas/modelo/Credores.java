@@ -91,7 +91,7 @@ public class Credores implements AbstractEntityId{
             return this;
         }
 
-        public Builder entidade(Pessoas pessoa) {
+        public Builder pessoa(Pessoas pessoa) {
             entity.setPessoa(pessoa);
             return this;
         }

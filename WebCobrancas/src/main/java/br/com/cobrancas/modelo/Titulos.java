@@ -143,7 +143,7 @@ public class Titulos implements AbstractEntityId {
             return this;
         }
         
-        public Builder numemroParcela(int numemroParcela) {
+        public Builder numeroParcela(int numemroParcela) {
             entity.setNumeroParcela(numemroParcela);
             return this;
         }

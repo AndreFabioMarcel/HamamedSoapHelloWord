@@ -41,7 +41,11 @@ public class Enderecos implements AbstractEntityId {
     public Long getId() {
         return this.id;
     }
-
+    
+    public void setId(long id) {
+        this.id = id;
+    }
+    
     public String getCep() {
         return cep;
     }
@@ -50,7 +54,7 @@ public class Enderecos implements AbstractEntityId {
         this.cep = cep;
     }
 
-    public Logradouros getLogradouros() {
+    public Logradouros getLogradouro() {
         return logradouro;
     }
 
@@ -58,7 +62,7 @@ public class Enderecos implements AbstractEntityId {
         this.logradouro = logradouro;
     }
 
-    public Bairros getBairros() {
+    public Bairros getBairro() {
         return bairro;
     }
 
@@ -94,6 +98,11 @@ public class Enderecos implements AbstractEntityId {
 
         public static Builder from(Enderecos endereco) {
             return new Builder(endereco);
+        }
+        
+        public Builder id(long id) {
+            entity.setId(id);
+            return this;
         }
 
         public Builder cep(String cep) {

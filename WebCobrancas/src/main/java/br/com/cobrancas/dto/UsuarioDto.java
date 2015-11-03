@@ -1,6 +1,5 @@
 package br.com.cobrancas.dto;
 
-import br.com.cobrancas.modelo.Entidades;
 import br.com.cobrancas.enun.TipoUsuario;
 import br.com.cobrancas.modelo.Usuarios;
 import br.com.cobrancas.util.AbstractRepresentationBuilder;
@@ -39,7 +38,7 @@ public class UsuarioDto {
     public UsuarioDto() {
     }
 
-    public UsuarioDto(Long id, String nome, String email, TipoUsuario tipoUsuario, String usuario, String senha, LocalDate dataCadastro) {
+    public UsuarioDto(final Long id, final String nome, final String email, final TipoUsuario tipoUsuario, final String usuario, final String senha, final LocalDate dataCadastro) {
         this.id = id;
         this.nome = nome;
         this.email = email;
@@ -53,56 +52,28 @@ public class UsuarioDto {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public TipoUsuario getTipoUsuario() {
         return tipoUsuario;
-    }
-
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
     }
 
     public String getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
     public String getSenha() {
         return senha;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
     public LocalDate getDataCadastro() {
         return dataCadastro;
-    }
-
-    public void setDataCadastro(LocalDate dataCadastro) {
-        this.dataCadastro = dataCadastro;
     }
 
     public static class UsuarioDtoBuilder {

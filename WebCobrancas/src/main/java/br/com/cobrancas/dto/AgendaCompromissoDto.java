@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     public AgendaCompromissoDto() {
     }
 
-    public AgendaCompromissoDto(Long id, String titulo, String compromisso, LocalDate dataCompromisso, Agendas agenda) {
+    public AgendaCompromissoDto(final Long id, final String titulo, final String compromisso, final LocalDate dataCompromisso, final Agendas agenda) {
         this.id = id;
         this.titulo = titulo;
         this.compromisso = compromisso;

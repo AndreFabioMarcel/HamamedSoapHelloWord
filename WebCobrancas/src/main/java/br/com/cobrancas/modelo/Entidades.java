@@ -209,7 +209,7 @@ public class Entidades implements AbstractEntityId {
             return this;
         }
         
-        public Builder contatos(Contatos contato) {
+        public Builder contato(Contatos contato) {
             entity.setContato(contato);
             return this;
         }
