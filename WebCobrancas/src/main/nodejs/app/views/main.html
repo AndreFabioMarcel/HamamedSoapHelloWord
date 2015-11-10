@@ -7,7 +7,7 @@
 
             <ul class="nav navbar-nav navbar-left">        
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         Configurações <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
@@ -18,7 +18,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         Cadastros <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
@@ -31,47 +31,52 @@
             </ul>
 
 
-            <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-messages">                        
-                        <li><a ui-sref="#"></a></li>
-                        <li><a ui-sref="#"></a></li>
-                        <li><a ui-sref="#"></a></li>                                            
-                        <li><a ui-sref="#"></a></li>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                    class="glyphicon glyphicon-envelope"></span> Mensagens <span class="label label-info">32</span>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="#"><span class="label label-warning">4:00 AM</span> Eventos favoritos</a></li>
+                        <li><a ui-sref="#"><span class="label label-warning">4:30 AM</span> Email de Compras</a></li>
+                        <li><a ui-sref="#"><span class="label label-warning">5:00 AM</span> Assinatura do contrato</a></li>
+                        <li class="divider"></li>
+                        <li><a ui-sref="#" class="text-center">Visualizar todas</a></li>
                     </ul>
-                    <!-- /.dropdown-messages -->
                 </li>
-
                 <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" ><span
+                    class="glyphicon glyphicon-comment"></span> Chat <span class="label label-primary">42</span>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref="#"><span class="label label-default">7:00 AM</span> Oi :)</a></li>
+                        <li><a ui-sref="#"><span class="label label-default">8:00 AM</span> Como você está?</a></li>
+                        <li><a ui-sref="#"><span class="label label-default">9:00 AM</span> O que você está fazendo?</a></li>
+                        <li class="divider"></li>
+                        <li><a ui-sref="#" class="text-center">Visualizar todas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                    class="fa fa-bell fa-fw"></span> Notificações <span class="label label-success">5</span>
+                </a>
                     <ul class="dropdown-menu dropdown-alerts">
-                        <li><a ui-sref="#"></a></li>
-                        <li><a ui-sref="#"></a></li>
-                        <li><a ui-sref="#"></a></li>                                            
-                        <li><a ui-sref="#"></a></li>
+                        <li><a ui-sref="#">Agenda vazia</a></li>
+                        <li><a ui-sref="#">...</a></li>                        
                     </ul>
                     <!-- /.dropdown-alerts -->
                 </li>
                 <!-- /.dropdown -->
 
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
+                <li id="dropdown-usuario" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"><span
+                    class="fa fa-user fa-fw"></span> Usuário <span class="label label-warning">2</span>
+                </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a ui-sref="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
-                        </li>
-                        <li><a ui-sref="#"><i class="fa fa-gear fa-fw"></i> Configurações</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a ui-sref="login"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
-                        </li>
+                       <li><a ui-sref="#"><i class="fa fa-user fa-fw"></i> Perfil do Usuário</a>
+                       </li>
+                       <li><a ui-sref="#"><i class="fa fa-gear fa-fw"></i> Configurações</a>
+                       </li>
+                       <li class="divider"></li>
+                       <li><a ui-sref="login"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
+                       </li>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
@@ -82,7 +87,7 @@
 
         <div class="container">
             <div class="jumbotron">
-                <div ui-view> </div>
+                <div ui-view> </div>                
             </div>
         </div>
 

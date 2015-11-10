@@ -28,7 +28,8 @@
         'ngSanitize',
         'ngTouch',
         'restangular',
-        'ui.router'
+        'ui.router',
+        'ui.bootstrap'
       ])
 
       .config(['$stateProvider','$urlRouterProvider','RestangularProvider', 

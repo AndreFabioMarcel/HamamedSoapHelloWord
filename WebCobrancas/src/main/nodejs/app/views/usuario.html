@@ -1,63 +1,80 @@
-<div class="fluid-container">
-    <div class="row">
-        <h2> Usuários</h2>       
-        <hr>
-        <div class="col-md-6">
-            <div class="input-group custom-search-form">
-                <input type="text" class="form-control">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">
-                        <span class="glyphicon glyphicon-search"></span>
-                    </button>
-                </span>
-            </div><!-- /input-group -->
-        </div>
-        <div class="col-md-6" >
-            <button type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal" data-target="#edit" > Inserir </button>  
-        </div>
 
-        <div class="col-md-12" style="margin-top:20px;margin-bottom:10px;"> 
-            <div class="table-responsive">
-                <table id="mytable" class="table table-bordered table-striped table-condensed">
-                    <thead>
-                    <th>Nome</th>
-                    <th>Login</th>
-                    <th>Email</th>
-                    <th>Edit</th>                                          
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="col-md-04">Fabio</td>    
-                            <td class="col-md-04">fabio.euzebio</td>
-                            <td class="col-md-04">fabio.euzebio@gmail.com</td>
-                            <td class="col-md-01">         
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Editar <span class="caret"></span>  
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#" data-toggle="modal" data-target="#edit" data-title="Edit"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a></li>
-                                        <li><a href="#" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir</a></li>
-                                    </ul>
-                                </div>
-                            </td>
-                        </tr>    
-                    </tbody>
-                </table>
-
-                <div class="clearfix"></div>
-                <ul class="pagination pull-right">
-                    <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-                </ul>
-            </div>
-        </div>
+<div class="row">
+    <h2> Usuários</h2>      
+</div> 
+<hr>
+<div class="row">
+    <div class="col-md-6" >
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#edit" > Inserir </button>  
+    </div>
+    <div class="col-md-6" class="pull-right">
+        <div class="input-group custom-search-form ">
+            <input type="text" class="form-control" ng-model="criterioDeBusca">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div><!-- /input-group -->
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-12" style="margin-top:20px;margin-bottom:10px;"> 
+
+        <table id="mytable" class="table table-bordered table-striped table-condensed">
+            <thead>
+            <th><a href="" ng-click="cu.ordenarPor('nome')">Nome <i class="fa fa-sort"></i></a></th>
+            <th><a href="" ng-click="cu.ordenarPor('login')">Login <i class="fa fa-sort"></i></a></th>
+            <th><a href="" ng-click="cu.ordenarPor('email')">Email <i class="fa fa-sort"></i></a></th>
+            <th>Edit</th>                                                              
+            </thead>
+            <tbody>
+                <tr ng-repeat="usuario in cu.usuarios| filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao |  limitTo:entryLimit">
+                    <td>{{usuario.nome}}</td>    
+                    <td>{{usuario.login}}</td>
+                    <td>{{usuario.email}}</td>
+                    <td>         
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Editar <span class="caret"></span>  
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-toggle="modal" data-target="#edit" data-title="Edit"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a></li>
+                                <li><a href="#" data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir</a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>    
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        Page Size:
+        <select ng-model="entryLimit" class="form-control">
+            <option>5</option>
+            <option>10</option>
+            <option>20</option>
+            <option>50</option>                           
+        </select>
+    </div>
+
+    <div class="col-md-8">
+        <uib-pagination total-items="bigTotalItems" 
+                        ng-model="bigCurrentPage" 
+                        max-size="maxSize" 
+                        class="pagination-sm" 
+                        boundary-links="true"
+                        rotate="false" 
+                        num-pages="numPages">
+        </uib-pagination>
+    </div>
+
+    
+</div>
+
 
 
 <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
@@ -129,4 +146,4 @@
         <!-- /.modal-content --> 
     </div>
     <!-- /.modal-dialog --> 
-</div>
+</div>    
