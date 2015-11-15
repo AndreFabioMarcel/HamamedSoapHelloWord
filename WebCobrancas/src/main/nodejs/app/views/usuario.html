@@ -24,13 +24,13 @@
 
         <table id="mytable" class="table table-bordered table-striped table-condensed">
             <thead>
-            <th><a href="" ng-click="cu.ordenarPor('nome')">Nome <i class="fa fa-sort"></i></a></th>
-            <th><a href="" ng-click="cu.ordenarPor('login')">Login <i class="fa fa-sort"></i></a></th>
-            <th><a href="" ng-click="cu.ordenarPor('email')">Email <i class="fa fa-sort"></i></a></th>
-            <th>Edit</th>                                                              
+            <th><a href="" ng-click="cu.ordenarPor('nome')">Nome <i class="fa fa-sort pull-right"></i></a></th>
+            <th><a href="" ng-click="cu.ordenarPor('login')">Login <i class="fa fa-sort pull-right"></i></a></th>
+            <th><a href="" ng-click="cu.ordenarPor('email')">Email <i class="fa fa-sort pull-right"></i></a></th>
+            <th style="width: 10px;"></th>                                                              
             </thead>
             <tbody>
-                <tr ng-repeat="usuario in cu.usuarios| filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao |  limitTo:entryLimit">
+                <tr ng-repeat="usuario in cu.usuarios| filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao |  limitTo:cu.entryLimit">
                     <td>{{usuario.nome}}</td>    
                     <td>{{usuario.login}}</td>
                     <td>{{usuario.email}}</td>
@@ -44,35 +44,28 @@
                             </ul>
                         </div>
                     </td>
-                </tr>    
-            </tbody>
+                </tr>
+            </tbody>            
         </table>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        Page Size:
-        <select ng-model="entryLimit" class="form-control">
-            <option>5</option>
-            <option>10</option>
-            <option>20</option>
-            <option>50</option>                           
-        </select>
+        <div class="row">   
+            <div class="col-md-6" class="pull-left">
+                Mostrar
+                <select ng-model="paginas" ng-change="cu.setItemsPagina(paginas)">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>50</option>
+                    <option>100</option>
+                    <option>Todas</option>
+                </select> linhas                
+            </div>
+            <div class="pull-right">
+                <div>Mostrando 1 de um total de XX registros</div>
+            </div>
+        </div>        
     </div>
-
-    <div class="col-md-8">
-        <uib-pagination total-items="bigTotalItems" 
-                        ng-model="bigCurrentPage" 
-                        max-size="maxSize" 
-                        class="pagination-sm" 
-                        boundary-links="true"
-                        rotate="false" 
-                        num-pages="numPages">
-        </uib-pagination>
-    </div>
-
-    
 </div>
 
 
@@ -85,7 +78,7 @@
                 <h4 class="modal-title custom_align" id="Heading">Usuários</h4>
             </div>
 
-            <div class="modal-body">
+            <div class="modal-body">    
                 <div class="form-group">
                     <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Nome" tabindex="1" ng-model="usuario.nome">
                 </div>   
