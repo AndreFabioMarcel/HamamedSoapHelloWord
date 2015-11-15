@@ -20,6 +20,7 @@
         'webCobrancasApp.usuarioRepository',
         'webCobrancasApp.bairroRepository',
         'webCobrancasApp.rodapeDirective',
+        'webCobrancasApp.arrowSortDirective',
         'webCobrancasApp.filters',
         'webCobrancasApp.router',
         'ngAnimate',

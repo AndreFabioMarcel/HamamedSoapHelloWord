@@ -8,8 +8,6 @@
  * Controller of the webCobrancasApp
  */
 
-var app = angular.module('webCobrancasApp');
-
 angular.module('webCobrancasApp.ctrlUsuario', [])
     .controller('ControllerUsuario', ControllerUsuario)
 
@@ -20,9 +18,14 @@ function ControllerUsuario($scope, $location, UsuarioRepository) {
 
     init();
 
-    function init(){
-    	$scope.paginas = 5;
-    	setarLinhas($scope.paginas);            		    	
+    function init() {
+        $scope.paginas = 5;
+        setarLinhas($scope.paginas);
+
+        $scope.sort = {
+            sortingOrder: 'Nome',
+            reverse: false
+        };
     }
 
     viewModel.save = function() {
@@ -31,17 +34,13 @@ function ControllerUsuario($scope, $location, UsuarioRepository) {
         });
     }
 
-    viewModel.ordenarPor = function(coluna) {
-        $scope.criterioDeOrdenacao = coluna;
-        $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
-    }
-
+    
     viewModel.setItemsPagina = function(num) {
-         setarLinhas(num);       
+        setarLinhas(num);
     }
 
-    function setarLinhas(num){
-    	viewModel.entryLimit= num;
+    function setarLinhas(num) {
+        viewModel.entryLimit = num;
     }
 
 
@@ -109,6 +108,6 @@ function ControllerUsuario($scope, $location, UsuarioRepository) {
         nome: "Fabio96",
         login: "fabio96.euzebio",
         email: "fabio96.euzebio@gmail.com"
-    }];    
-    
+    }];
+
 }

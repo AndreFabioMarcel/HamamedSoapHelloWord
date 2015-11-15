@@ -24,13 +24,13 @@
 
         <table id="mytable" class="table table-bordered table-striped table-condensed">
             <thead>
-            <th><a href="" ng-click="cu.ordenarPor('nome')">Nome <i class="fa fa-sort pull-right"></i></a></th>
-            <th><a href="" ng-click="cu.ordenarPor('login')">Login <i class="fa fa-sort pull-right"></i></a></th>
-            <th><a href="" ng-click="cu.ordenarPor('email')">Email <i class="fa fa-sort pull-right"></i></a></th>
+            <th arrow-sort order="'nome'" sort="sort">Nome </th>
+            <th arrow-sort order="'login'" sort="sort">Login </th>
+            <th arrow-sort order="'email'" sort="sort">Email </th>                        
             <th style="width: 10px;"></th>                                                              
             </thead>
             <tbody>
-                <tr ng-repeat="usuario in cu.usuarios| filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao |  limitTo:cu.entryLimit">
+                <tr ng-repeat="usuario in cu.usuarios| filter:criterioDeBusca | orderBy:sort.sortingOrder:sort.reverse |  limitTo:cu.entryLimit">
                     <td>{{usuario.nome}}</td>    
                     <td>{{usuario.login}}</td>
                     <td>{{usuario.email}}</td>
@@ -48,8 +48,8 @@
             </tbody>            
         </table>
 
-        <div class="row">   
-            <div class="col-md-6" class="pull-left">
+        <div class="col-md-12" class="row">   
+            <div class="pull-left">
                 Mostrar
                 <select ng-model="paginas" ng-change="cu.setItemsPagina(paginas)">
                     <option>5</option>
@@ -62,7 +62,7 @@
                 </select> linhas                
             </div>
             <div class="pull-right">
-                <div>Mostrando 1 de um total de XX registros</div>
+                <div>Mostrando {{cu.entryLimit}} de um total de {{cu.usuarios.length}} registros</div>
             </div>
         </div>        
     </div>
