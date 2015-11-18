@@ -33,7 +33,6 @@ function ControllerUsuario($scope, $location, UsuarioRepository) {
             $location.path('/login');
         });
     }
-
     
     viewModel.setItemsPagina = function(num) {
         setarLinhas(num);

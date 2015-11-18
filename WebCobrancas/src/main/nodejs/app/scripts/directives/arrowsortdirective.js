@@ -13,7 +13,6 @@
                 sort: '='
             },
             template: ' <a href="" ng-click="sortBy(order)" style="color: #555555;"><span ng-transclude></span><i ng-class="selectedCls(order)"></i></a>',
-                      //<a href="" ng-click="cu.ordenarPor('nome')">Nome <i class="fa fa-sort pull-right"></i></a>
             link: function(scope) {
 
                     // change sorting order
