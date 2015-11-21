@@ -1,37 +1,38 @@
-'use strict';
+(function() {
 
-/**
- * @ngdoc function
- * @name webCobrancasApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the webCobrancasApp
- */
+    'use strict';
 
-angular.module('webCobrancasApp.ctrlMain', [])
-    .controller('ControllerMain', ControllerMain)
-    .run(appRun);
+    /**
+     * @ngdoc function
+     * @name webCobrancasApp.controller:MainCtrl
+     * @description
+     * # MainCtrl
+     * Controller of the webCobrancasApp
+     */
 
-/**
- * Controller Main
- */
+    angular.module('webCobrancasApp.ctrlMain', [])
+        .controller('ControllerMain', ControllerMain)
+        .run(appRun);
 
-ControllerMain.$inject = ['$injector'];
+    /**
+     * Controller Main
+     */
 
-function ControllerMain($injector) {
-    var viewModel = this;
+    ControllerMain.$inject = ['$injector'];
 
-    viewModel.awesomeThings = ['HTML5 Boilerplate','AngularJS','Karma'];
-}
+    function ControllerMain($injector) {
+        var viewModel = this;
 
-/* @ngInject */
-function appRun(routerHelper) {
-    routerHelper.configureStates(getStates());
-}
+        viewModel.awesomeThings = ['HTML5 Boilerplate', 'AngularJS', 'Karma'];
+    }
 
-function getStates() {
-    return [
-        {
+    /* @ngInject */
+    function appRun(routerHelper) {
+        routerHelper.configureStates(getStates());
+    }
+
+    function getStates() {
+        return [{
             state: 'main.usuario',
             config: {
                 url: '/usuario',
@@ -39,64 +40,64 @@ function getStates() {
                 controller: 'ControllerUsuario',
                 controllerAs: 'cu'
             }
-        },
-        {
+        }, {
             state: 'main.entidade',
-            config: {                                
+            config: {
                 url: '/entidade',
                 templateUrl: 'views/entidade.html'
             }
-        },
-        {
+        }, {
             state: 'main.credores',
-            config: {                                
+            config: {
                 url: '/credores',
                 templateUrl: 'views/credores.html'
             }
-        },
-        {
+        }, {
             state: 'main.devedores',
-            config: {                                
+            config: {
                 url: '/devedores',
                 templateUrl: 'views/devedores.html'
             }
-        },
-        {
+        }, {
             state: 'main.relatorios',
-            config: {                                
+            config: {
                 url: '/relatorios',
                 templateUrl: 'views/relatorios.html'
             }
-        },
-        {
+        }, {
             state: 'main.agenda',
-            config: {                                
+            config: {
                 url: '/agenda',
                 templateUrl: 'views/agenda.html'
             }
-        },
-        {
+        }, {
             state: 'main.negociacoes',
-            config: {                                
+            config: {
                 url: '/negociacoes',
                 templateUrl: 'views/negociacoes.html'
             }
-        },
-        {
+        }, {
             state: 'main.acordos',
-            config: {                                
+            config: {
                 url: '/acordos',
                 templateUrl: 'views/acordos.html'
             }
-        },
-        {
+        }, {
             state: 'main.bairros',
-            config: {                                
+            config: {
                 url: '/bairros',
                 templateUrl: 'views/bairros.html',
                 controller: 'ControllerBairro',
                 controllerAs: 'cb'
             }
-        }
-    ];
-}
+        }, {
+            state: 'main.logradouros',
+            config: {
+                url: '/logradouros',
+                templateUrl: 'views/logradouros.html',
+                controller: 'ControllerLogradouros',
+                controllerAs: 'CtrlLogradouros'
+            }
+        }];
+    }
+})();

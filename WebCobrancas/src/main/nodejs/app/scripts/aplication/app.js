@@ -16,6 +16,7 @@
         'webCobrancasApp.ctrlLogin',
         'webCobrancasApp.ctrlUsuario',
         'webCobrancasApp.ctrlBairro',
+        'webCobrancasApp.ctrlLogradouros',
         'webCobrancasApp.factoryRepository',
         'webCobrancasApp.usuarioRepository',
         'webCobrancasApp.bairroRepository',
