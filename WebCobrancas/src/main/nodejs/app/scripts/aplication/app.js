@@ -22,6 +22,8 @@
         'webCobrancasApp.bairroRepository',
         'webCobrancasApp.rodapeDirective',
         'webCobrancasApp.arrowSortDirective',
+        'webCobrancasApp.modalGeral',
+        'webCobrancasApp.modalTemplate',
         'webCobrancasApp.filters',
         'webCobrancasApp.router',
         'ngAnimate',
@@ -31,7 +33,8 @@
         'ngTouch',
         'restangular',
         'ui.router',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'notyModule'
       ])
 
       .config(['$stateProvider','$urlRouterProvider','RestangularProvider', 
