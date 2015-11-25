@@ -4,17 +4,20 @@
     angular.module('webCobrancasApp.ctrlLogradouros', [])
         .controller('ControllerLogradouros', ControllerLogradouros);
 
-    function ControllerLogradouros() {
+    ControllerLogradouros.$inject = ['noty'];
+
+    function ControllerLogradouros(noty) {
         var viewModel = this;
 
         var metodosPublicos = {
-            metodoDefault: _metodoDefault
+            message: _message
         };
 
-        return metodosPublicos;
+        _.extend(viewModel, metodosPublicos);
 
-        function _metodoDefault() {
-            return 'teste';
+        function _message() {
+            noty.show('Variável não declarada na aplicação!', "error");
         }
     }
+
 })();
