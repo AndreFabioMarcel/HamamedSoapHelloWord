@@ -27,6 +27,7 @@ public class ApplicationConfig extends Application {
         resources.add(br.com.cobrancas.resource.EntidadeResource.class);
         resources.add(br.com.cobrancas.resource.EstadoResource.class);
         resources.add(br.com.cobrancas.resource.LogradouroResource.class);
+        resources.add(br.com.cobrancas.resource.SpringSecurityResource.class);
         resources.add(br.com.cobrancas.resource.UsuarioEntidadeResource.class);
         resources.add(br.com.cobrancas.resource.UsuarioResource.class);
     }
